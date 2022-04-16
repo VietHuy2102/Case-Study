@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="a.js/a.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h3>
+            <button> Đăng Nhập</button>
+        </h3>
+    </div>
+
+    <div class="content">
+        <div class="left ">
+            <div class="menu-top">
+                <div class="avatar">
+                    <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-users-icon-png-image_4144740.jpg"
+                         alt="" width="100%">
+                </div>
+                <div class="profile">
+                    <h3 style="margin-left: 50px">Wellcome, Suki</h3>
+                    <ul>
+                        <li>Hòm Thư</li>
+                        <li>Danh Bạ</li>
+                        <li>Cài Đặt</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-bot">
+
+                <h5>Dashboard</h5>
+            </div>
+
+
+        </div>
+        <div class="right">
+            <div class="top-content">
+                <div class="left-top-content">
+                    <img src="images/logi.JPG" height="100" width="300"/></div>
+                <div class="right-top-content">
+                    <h3>Nhập các thông tin</h3>
+                    <table class="table">
+                        <tr>
+                            <td>Activate</td>
+                            <td><input type="text" id="activate"></td>
+                        </tr>
+                        <tr>
+                            <td>Time</td>
+                            <td><input type="text" id="time"></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td><input type="text" id="location"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button onclick="save()">Save</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="bot-content">
+                <h4>Menu</h4>
+                <table class="table-bot-content">
+                    <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Activate</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                    </tr>
+                    </thead>
+                    <tbody id="list-content">
+                    <tr>
+                        <td>1</td>
+                        <td>Đi bộ</td>
+                        <td>thứ 2</td>
+                        <td>Công viên</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
