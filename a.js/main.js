@@ -15,20 +15,20 @@ function save() { //tao ra 1 nut bam onclick vao day voi id: save
     let time = document.getElementById('time').value;
     let location = document.getElementById('location').value;
 //Sau đó khởi tạo thành 1 đối tượng
-    let timetable = new Timetable(activate, time, location);
+    let timeTable = new Timetable(activate, time, location);
 
     let currentData = loadLocalStorage();
     // !currentData sẽ ra kết quả null
     if (!currentData) {//Nếu mảng curr không có dữ liệu ( Th thêm dữ liệu lần đầu tiên)
         let arr = [];
-        arr.push(timetable);  // push lần đầu tiên timetable vào mảng
+        arr.push(timeTable);  // push lần đầu tiên timetable vào mảng
         saveLocalStorage(arr); // ;lưu mảng arr vào Storage
     } else {
         if (n === -1) { // TH thêm lần thứ 2, gán n = -1 ở trên(n là vị trí index ở trong mảng)
-            currentData.push(timetable); // push timetable vào vị trí cuối mảng currentData
+            currentData.push(timeTable); // push timetable vào vị trí cuối mảng currentData
             saveLocalStorage(currentData);// ;lưu mảng arr vào Storage
         } else {
-            currentData[n] = timetable;// đây là TH edit, n = index vị trí của OBJ cần chỉnh sửa thông tin=> n#-1, sửa lại thông tin thành timetable mới tại vị trí n
+            currentData[n] = timeTable;// đây là TH edit, n = index vị trí của OBJ cần chỉnh sửa thông tin=> n#-1, sửa lại thông tin thành timetable mới tại vị trí n
             saveLocalStorage(currentData);// ;lưu mảng arr vào Storage
             n = -1;// gàn lại n=-1 để lập lại vòng lặp mới, nếu không thì những TH sau sẽ tự động nhẩy về TH edit
         }
@@ -65,17 +65,19 @@ function loadLocalStorage() { // hành động lấy từ bộ nhớ ra
 
 showTimetable();
 
-function editTimetable(x) {// hành động sửa
+function editTimetable(x) {// hành động click vào edit sẽ lấy lại ra giá trị cũ để mình sửa đổi
     let data = loadLocalStorage(); // đặt data bằng mảng Obj đã lấy ra ở trên
     n = x;
     document.getElementById('activate').value = data[n]._activate;//lấy thuộc tính activate của Obj ở vị trí thứ n của mảng data
     document.getElementById('time').value = data[n]._time;
     document.getElementById('location').value = data[n]._location;
+
 }
 
 function deleteTimetable(timetable) {
     let data = loadLocalStorage();
     data.splice(timetable, 1);
+    confirm("Bạn chắc chắn xóa hoạt động này chứ ?");
     saveLocalStorage(data);
     showTimetable();
 }

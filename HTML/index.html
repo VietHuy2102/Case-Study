@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
@@ -25,24 +25,31 @@
                          alt="" width="100%">
                 </div>
                 <div class="profile">
-                    <h3 style="margin-left: 50px">Wellcome, Suki</h3>
-                    <ul>
-                        <li>Hòm Thư</li>
-                        <li>Danh Bạ</li>
-                        <li>Cài Đặt</li>
-                    </ul>
+                    <h3 style="margin-left: 50px">Wellcome, Suki </h3>
+
                 </div>
             </div>
             <div class="menu-bot">
-
-                <h5>Dashboard</h5>
-                <ul>
-                    <li>Over Views</li>
-                    <li>Views</li>
-                    <li>Traffic</li>
-                    <li>Orders</li>
-                    <li>News</li>
-                </ul>
+                <div class="w3-container">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+                       onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Close
+                        Menu</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>&nbsp;
+                        Overview</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>&nbsp; Views</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>&nbsp; Traffic</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Geo</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>&nbsp;
+                        Orders</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>&nbsp; News</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>&nbsp; General</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>&nbsp;
+                        History</a><br>
+                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a><br><br>
+                </div>
             </div>
 
 
@@ -50,21 +57,21 @@
         <div class="right">
             <div class="top-content">
                 <div class="left-top-content">
-                    <img src="images/logi.JPG" height="100" width="300"/></div>
+                    <img src="../images/Suki.JPG" height="300" width="300"/></div>
                 <div class="right-top-content">
                     <h3>Nhập các thông tin</h3>
                     <table class="table">
                         <tr>
                             <td>Activate</td>
-                            <td><input type="text" id="activate"></td>
+                            <td><input type="text" placeholder="Nhập hoạt động của bạn" id="activate"></td>
                         </tr>
                         <tr>
                             <td>Time</td>
-                            <td><input type="text" id="time"></td>
+                            <td><input type="text" placeholder="Nhập Thời gian nào" id="time"></td>
                         </tr>
                         <tr>
                             <td>Location</td>
-                            <td><input type="text" id="location"></td>
+                            <td><input type="text" placeholder="Nhập địa điểm đi" id="location"></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -94,10 +101,11 @@
 
             </div>
 
+
         </div>
     </div>
 
 </div>
-<script src="a.js/a.js"></script>
+<script src="../a.js/main.js"></script>
 </body>
 </html>

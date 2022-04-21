@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        min-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .card button:hover {
+        opacity: 0.7;
+    }
+</style>
+<body>
+<div id="list-activate"></div>
+<script src="../a.js/main.js"></script>
+<script>
+    function getObjs() {
+        let data = loadLocalStorage();
+        let objs = [];
+        for (let i = 0; i < data.length; i++) {
+            let obj = new Timetable(data[i]._activate,data[i]._time,data[i]._location);
+            objs.push(obj);
+        }
+        return objs;
+    }
+    function display() {
+        let str = "";
+        let tabs = getObjs();
+        for (let i = 0; i < tabs.length; i++) {
+            str+= tabs[i].getHtml();
+        }
+        document.getElementById('list-activate').innerHTML = str;
+    }
+
+    display();
+</script>
+</body>
+</html>
